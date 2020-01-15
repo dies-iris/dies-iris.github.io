@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="queries.css">
+    <link rel="stylesheet" href="css/font/flaticon.css">
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display|Montserrat&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <title>Food 2.0</title>
+</head>
+
+<body>
+    <div id="background-video">
+        <video id="video_back" autoplay loop muted>
+            <source src="./assets/background.mp4" type="video/mp4">
+        </video>
+    </div>
+    <img id="logo" src="./assets/food-green.svg" alt="logo-food-2-0" />
+    <nav id="navbar">
+        <ul>
+            <li><a href="#mission">Mission</a></li>
+            <li><a href="#produits">Produits</a></li>
+            <li><a href="#contacts">Contacts</a></li>
+        </ul>
+    </nav>
+
+    <!-------------------------HEADER---------------------->
+    <header>
+        <p>#1 viande cultivée en France</p>
+        <div id="titre_principal">
+            <h1>Meilleur pour </h1>
+            <span id="container_change">
+                <h1 id="placeholder">les animaux</h1>
+                <h1 id="toi"> toi</h1>
+                <h1 id="animaux"> les animaux</h1>
+                <h1 id="planete"> la planète</h1>
+            </span>
+        </div>
+        <h1>...et toujours aussi bon.</h1>
+    </header>
+
+    <!-------------------------MISSION---------------------->
+
+    <section id="mission" data-aos="fade-up">
+        <h2 class="titre" data-aos="fade-right">Notre mission</h2>
+        <div></div>
+        <div>
+            <p>La consommation de viande va augmenter de 70% d’ici à 2050, selon l'Organisation des Nations Unies.
+                <br />
+                <br />
+                Nous utilisons déjà la majorité des terres agricoles pour l'élevage. En outre, la pénurie d’eau est un
+                problème croissant auquel le bétail contribue de manière significative (un burger réquis 5900 litres
+                d’eau).
+                <br />
+                <br />
+                Nous n’avons pas assez de terre et d’eau pour augmenter la
+                production de viande de 70% si nous continuons comme ça.
+                <br />
+                <br />
+                Cela signifie que nous devons soit réduire notre consommation de viande, soit trouver un moyen plus
+                efficace de la produire.
+                <br />
+                <br />
+                FOOD 2.0 utilisera jusqu'à 99% moins de terres et 96% moins
+                d'eau. Cette plus grande efficacité permettra de fournir de la viande véritable à la
+                population croissante du monde de manière durable.
+            </p>
+        </div>
+        <div>
+            <button id="video_mission" onclick="showVideo()">REGARDER LA VIDEO</button>
+        </div>
+    </section>
+
+    <!-------------------------VIDEO POPUP---------------------->
+    <div id="video_popup">
+        <div id="blur" onclick="closeVideo()"></div>
+        <div id="iframe_container">
+            <iframe id="video_full" width="560" height="315" src="https://www.youtube.com/embed/Bvm8lCdD9rM"
+                frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+        </div>
+    </div>
+    <div id="phrase" data-aos="fade-up">
+        <h1>Nous sommes ravis de produire la viande afin que les gens du monde entier puissent en profiter
+            tout en protégeant notre précieuse planète.</h1>
+    </div>
+
+    <!-------------------------PRODUITS---------------------->
+    <section id="produits" data-aos="fade-up">
+        <h2 class="titre" data-aos="fade-right">Nos produits</h2>
+        <div id="clickable">
+            <div class="pulse" id="1st-text" onclick="changeText(0)"></div>
+            <div class="pulse" id="2nd-text" onclick="changeText(1)"></div>
+            <div class="pulse" id="3rd-text" onclick="changeText(2)"></div>
+        </div>
+        <div id="text_container">
+            <div id="text_wrapper">
+                <h2 id="produits_titre"></h2>
+                <p id="produits_text"></p>
+                <img id="produits_image" src="" />
+            </div>
+            <div id="mask"></div>
+        </div>
+    </section>
+    <!-------------------------INVESTISSEURS---------------------->
+    <div id="investisseurs" data-aos="fade-up">
+        <div id="sideways">
+            <h2>Ils nous font confiance</h2>
+            <div id="marquee"></div>
+        </div>
+
+    </div>
+    <!-------------------------NEWSLETTER---------------------->
+    <section id="contacts" data-aos="fade-up">
+        <div>
+            <div>
+                <h2>Newsletter</h2>
+                <form action="submit">
+                    <div>
+                        <label for="prenom" id="label_prenom">prénom</label>
+                        <input id="prenom" name="prenom" type="text" onfocus="moveLabel(label_prenom)"
+                            onblur="toDefault(label_prenom)">
+                    </div>
+                    <div>
+                        <label for="mail" id="label_mail">mail</label>
+                        <input id="mail" name="mail" type="text" onfocus="moveLabel(label_mail)"
+                            onblur="toDefault(label_mail)">
+                    </div>
+                    <button type="submit">JE M'INSCRIS</button>
+                </form>
+            </div>
+        </div>
+    </section>
+    <!-------------------------FOOTER---------------------->
+    <footer>
+        <ul>
+            <li><a href="#"><i class="flaticon-instagram"></i></a href="#"></li>
+            <li><a href="#"><i class="flaticon-twitter"></i></a></li>
+            <li><a href="#"><i class="flaticon-facebook"></i></a></li>
+        </ul>
+        <a href="#">Mentions légales</a>
+        <p>© Copyright Food 2.0, 2020</p>
+    </footer>
+    <script src="app.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            delay: 0, // values from 0 to 3000, with step 50ms
+            duration: 600,
+            once: true
+        });
+    </script>
+</body>
+
+</html>
