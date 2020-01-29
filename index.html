@@ -71,13 +71,13 @@
             </p>
         </div>
         <div>
-            <button id="video_mission" onclick="showVideo()">REGARDER LA VIDEO</button>
+            <button id="video_mission">REGARDER LA VIDEO</button>
         </div>
     </section>
 
     <!-------------------------VIDEO POPUP---------------------->
     <div id="video_popup">
-        <div id="blur" onclick="closeVideo()"></div>
+        <div id="blur"></div>
         <div id="iframe_container">
             <iframe id="video_full" width="560" height="315" src="https://www.youtube.com/embed/Bvm8lCdD9rM"
                 frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
@@ -93,9 +93,9 @@
     <section id="produits" data-aos="fade-up">
         <h2 class="titre" data-aos="fade-right">Nos produits</h2>
         <div id="clickable">
-            <div class="pulse" id="1st-text" onclick="changeText(0)"></div>
-            <div class="pulse" id="2nd-text" onclick="changeText(1)"></div>
-            <div class="pulse" id="3rd-text" onclick="changeText(2)"></div>
+            <div class="pulse" id="1st-text" ></div>
+            <div class="pulse" id="2nd-text" ></div>
+            <div class="pulse" id="3rd-text" ></div>
         </div>
         <div id="text_container">
             <div id="text_wrapper">
@@ -121,14 +121,13 @@
                 <h2>Newsletter</h2>
                 <form action="submit">
                     <div>
+                        
+                        <input required id="prenom" name="prenom" type="text">
                         <label for="prenom" id="label_prenom">prénom</label>
-                        <input id="prenom" name="prenom" type="text" onfocus="moveLabel(label_prenom)"
-                            onblur="toDefault(label_prenom)">
                     </div>
                     <div>
+                        <input required id="mail" name="mail" type="text">
                         <label for="mail" id="label_mail">mail</label>
-                        <input id="mail" name="mail" type="text" onfocus="moveLabel(label_mail)"
-                            onblur="toDefault(label_mail)">
                     </div>
                     <button type="submit">JE M'INSCRIS</button>
                 </form>

@@ -8,12 +8,7 @@ window.onscroll = function () {
     }
     prevScrollpos = currentScrollPos;
 }
-const moveLabel = label => {
-    label.className = "active";
-}
-const toDefault = label => {
-    label.className = "";
-}
+
 const popup = document.getElementById("video_popup");
 const showVideo = () => {
     popup.style.opacity = "1";
@@ -75,3 +70,12 @@ const changeText = (index) => {
     styleText.pointerEvents = "all";
 
 }
+
+document.getElementById("video_mission").addEventListener('click', showVideo,false);
+document.getElementById("blur").addEventListener('click', closeVideo, false);
+const pulse = Array.from(document.getElementsByClassName("pulse"));
+pulse.forEach((element,i) => {
+    element.addEventListener('click', function(){changeText(i)}, false);
+});
+
+
